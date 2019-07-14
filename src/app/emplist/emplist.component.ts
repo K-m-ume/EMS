@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-emplist',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emplist.component.css']
 })
 export class EmplistComponent implements OnInit {
-
-  constructor() { }
-
+ public employees = [];
+  constructor(private _employeeservice:ServiceService) { }
   ngOnInit() {
+   this._employeeservice.getEmployees().subscribe(data => this.employees=data);
   }
 
 }
