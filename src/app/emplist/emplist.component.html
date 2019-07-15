@@ -1,5 +1,6 @@
-<div id="background-form">
-  <textarea rows="3" cols="30">
-      Employee Names
+<div id="background-form"  >
+  <textarea rows="3" cols="30" *ngFor="let item of employees">
+    Employee Names
+    {{item.employee_ID}} - {{item.employee_NAME}}
   </textarea>
    </div>     

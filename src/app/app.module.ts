@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-
+import { ServiceService } from './service.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,    
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
