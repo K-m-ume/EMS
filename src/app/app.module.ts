@@ -7,9 +7,9 @@ import { EmplistComponent } from './emplist/emplist.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceService } from './service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { ServiceService } from './service.service';
   ],
   imports: [
     BrowserModule,    
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]
